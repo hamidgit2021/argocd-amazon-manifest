@@ -23,7 +23,7 @@ spec:
     spec: # Pod spec
       containers:
       - name: amazon-container
-        image: hamid2021/amazon:DOCKERTAG
+        image: hamid2021/amazon:
         ports:
         - containerPort: 3000
         
