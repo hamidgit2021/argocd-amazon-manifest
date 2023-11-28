@@ -1,7 +1,7 @@
 node {
     def app
     
-    env.IMAGE = 'hamid2021/amazon'
+    env.IMAGE = 'hamidgit2021/amazon'
 
     stage('Clone repository') {
              git branch: 'main', url: 'https://github.com/hamidgit2021/argocd-amazon-manifest.git'  
@@ -10,9 +10,9 @@ node {
     stage('Update GIT') {
             script {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    withCredentials([usernamePassword(credentialsId: 'hamid-github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                    withCredentials([usernamePassword(credentialsId: 'hamidgit2021-github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         //script {def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')}
-                        //script  {def IMAGE='hamid2021/amazon'}
+                        //script  {def IMAGE='hamidgit2021/amazon'}
                         sh "git config user.email zadman50@yahoo.com"
                         sh "git config user.name hamidgit2021"
                         //sh "git switch master"
