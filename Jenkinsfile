@@ -1,7 +1,7 @@
 node {
     def app
     
-    env.IMAGE = 'hamid2021/amazon'
+    env.IMAGE = 'ooghenekaro/amazon'
 
     stage('Clone repository') {
              git branch: 'main', url: 'https://github.com/hamidgit2021/argocd-amazon-manifest.git'  
